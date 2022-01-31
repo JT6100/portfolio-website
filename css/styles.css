@@ -1,0 +1,421 @@
+:root {
+    --primary-color: #13505B;
+    --secondary-color: #D7D9CE;
+    --tershiary-color: #040404;
+    --light-color: #119da4;
+    --purple: #53357b;
+    --main-font: "Lato", sans-serif;
+
+}
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0px;
+
+    padding: 0px;
+
+}
+
+
+body{
+
+    background-color: var(--primary-color);
+  
+    font-family: var(--main-font);
+
+    font-weight: 400;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin:  1%;
+    
+}
+
+h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+h2 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+h3 {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+header{
+
+  
+    font-family: var(--main-font);
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+    
+
+}
+
+footer{
+
+    font-family: var(--main-font);
+
+    font-weight: 700;
+
+    font-size: 30;
+
+    line-height: 1.6;
+}
+
+h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+h2 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+h3 {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+a {
+
+    color: var(--secondary-color);
+
+}
+
+a:hover, a:focus {
+    
+    text-decoration: none;
+}
+
+a:visited {
+
+    /*visited link */
+
+    color: var(--secondary-color)
+
+}
+
+a:active {
+    
+
+    color: #53357b;
+
+}
+
+
+.navigation-list__item--active {
+
+    text-decoration: none;
+
+
+}
+
+.navigation-list{
+
+    list-style-type: none;
+}
+
+.navigation-list li {
+
+    display: inline-block;
+
+    margin-left: 15px;
+}
+
+.profile__portrait {
+
+    float: left;
+
+    width: 250px;
+
+    margin-right: 40px;
+
+    border-radius: 50%;
+
+    }
+
+.page-footer{
+
+    clear:both;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    text-align: center;
+}
+
+.profile {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.about_me{
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.contact{
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+.page-header{
+
+    display: flex;
+
+    width: 100%;
+
+    padding: 20px;
+
+}
+
+.page-header__item{
+
+    flex: 0 1 200px;
+
+}
+
+.page-header__item:last-child {
+
+    flex-grow: 1;
+
+    text-align: right;
+
+}
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-gap: 20px;
+
+    justify-items: center;
+    
+    margin: 20px;
+
+}
+
+.grid__item{
+    
+    background-color: var(--secondary-color);
+
+    padding: 20px;
+
+}
+
+.grid__item {
+
+    display: inline-block;
+    
+
+}
+
+.grid__item:last-child {
+
+    grid-column-start: 3;
+
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+
+    grid-row-end: 3;
+}
+
+.grid__item:last-child{
+
+    grid-column: 3 / 3;
+
+    grid-row: 1 / 3;
+
+}
+
+@media all and (max-width: 500px) {
+
+    .grid{
+        
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+
+    .grid {
+
+        grid-template-columns: 1fr  1fr;
+
+    }
+
+}
+
+@media all and (max-width: 750px) {
+
+    .grid {
+
+        grid-gap: 10px;
+
+    }
+
+    .grid__item:last-child {
+
+        grid-column: auto / auto;
+
+        grid-row: auto / auto;
+
+    }
+
+    h1 {
+
+        font-size: 22px;
+        
+    }
+}
+
+.button, button{
+
+    border: none;
+
+    display: inline-block;
+
+    font-family: inherit;
+
+    background-color: var(--light-color);
+
+    color: var(--secondary-color);
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    border-radius: 3px;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
+    transition-duration: 0.2s;
+
+    transition-property: opacity;
+
+}
+
+button:hover,
+
+button:focus,
+
+.button:hover,
+
+.button:focus {
+
+    cursor: pointer;
+
+    opacity: 0.8;
+}
+
+@keyframes color-change {
+
+   0% {
+
+        fill: #edc655;
+    }
+
+    50%{
+
+       fill: #fcffad;
+    }
+
+    100% {
+
+        fill: #f76414;
+    }
+    
+}
+
+.sun{
+
+    animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+
+    from {
+
+        transform: translate(0, 50 px);
+
+    }
+
+    to {
+
+        transform: translate(200px, 50px)
+    }
+    
+}
+
+.cloud-front {
+
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+
+    from {
+
+      transform: translate(446px, 48px);
+
+    }
+
+    to {
+
+      transform: translate(100px, 48px);
+
+    }
+
+  }
+
+  .cloud-back {
+
+    animation: 34s cloud-move-reverse infinite alternate linear;
+
+  }

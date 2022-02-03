@@ -82,6 +82,21 @@ footer{
     font-size: 30px;
 
     line-height: 1.6;
+
+    background-color: var(--secondary-color);
+
+    position: fixed;
+
+    padding: 15px;
+
+    bottom: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    left: 0;
+
 }
 
 h1 {

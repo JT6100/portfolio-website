@@ -31,7 +31,6 @@ body{
 
     line-height: 1.6;
 
-    margin:  1%;
 
 }
 
@@ -83,11 +82,19 @@ footer{
 
     line-height: 1.6;
 
-    position: fix;
+    position: fixed;
+
+    bottom: 0;
 
     text-align: center;
 
     margin-top: 15px;
+
+    background-color: var(--secondary-color);
+
+    width:100%;
+
+
 
 }
 
@@ -360,69 +367,3 @@ button:focus,
 
     opacity: 0.8;
 }
-
-@keyframes color-change {
-
-   0% {
-
-        fill: #edc655;
-    }
-
-    50%{
-
-       fill: #fcffad;
-    }
-
-    100% {
-
-        fill: #f76414;
-    }
-
-}
-
-.sun{
-
-    animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-
-    from {
-
-        transform: translate(0, 50 px);
-
-    }
-
-    to {
-
-        transform: translate(200px, 50px)
-    }
-
-}
-
-.cloud-front {
-
-    animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-
-    from {
-
-      transform: translate(446px, 48px);
-
-    }
-
-    to {
-
-      transform: translate(100px, 48px);
-
-    }
-
-  }
-
-  .cloud-back {
-
-    animation: 34s cloud-move-reverse infinite alternate linear;
-
-  }
